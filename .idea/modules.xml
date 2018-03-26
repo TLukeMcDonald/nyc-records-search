@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SECA_P3_Backend.iml" filepath="$PROJECT_DIR$/SECA_P3_Backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SECA_P3_Backend_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SECA_P3_Backend_main.iml" group="SECA_P3_Backend" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SECA_P3_Backend_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SECA_P3_Backend_test.iml" group="SECA_P3_Backend" />
+    </modules>
+  </component>
+</project>
