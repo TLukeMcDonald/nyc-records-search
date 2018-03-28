@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="487003b8-aa6c-4920-b125-4fb81b35ec72" name="Default" comment="">
+    <list default="true" id="a2dc9c30-dfb3-432e-85a5-0fdae1873ce2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/3.5.1/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.5.1/fileContent/fileContent.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/3.5.1/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5.1/taskHistory/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/3.5.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5.1/taskHistory/fileSnapshots.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/3.5.1/taskHistory/jvmClassSignatures.bin" afterPath="$PROJECT_DIR$/.gradle/3.5.1/taskHistory/jvmClassSignatures.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/3.5.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5.1/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/3.5.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5.1/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.springbootmicroservicewrapperwithtests.features.UsersApiFeatureTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.springbootmicroservicewrapperwithtests.features.UsersApiFeatureTest.html" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.springbootmicroservicewrapperwithtests.features.UsersUIFeatureTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.springbootmicroservicewrapperwithtests.features.UsersUIFeatureTest.html" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gradlew" afterPath="$PROJECT_DIR$/api-gateway/gradlew" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.springbootmicroservicewrapperwithtests.features.UsersApiFeatureTest.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.springbootmicroservicewrapperwithtests.features.UsersUIFeatureTest.html" afterPath="" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.springbootmicroservicewrapperwithtests.features.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.springbootmicroservicewrapperwithtests.features.html" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.springbootmicroservicewrapperwithtests.features.UsersApiFeatureTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.springbootmicroservicewrapperwithtests.features.UsersApiFeatureTest.xml" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.springbootmicroservicewrapperwithtests.features.UsersUIFeatureTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.springbootmicroservicewrapperwithtests.features.UsersUIFeatureTest.xml" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.springbootmicroservicewrapperwithtests.features.UsersApiFeatureTest.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.springbootmicroservicewrapperwithtests.features.UsersUIFeatureTest.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" afterPath="$PROJECT_DIR$/docker-compose.yml" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/gradlew" afterPath="$PROJECT_DIR$/eureka-server/gradlew" />
+      <change beforePath="$PROJECT_DIR$/gradlew" afterPath="$PROJECT_DIR$/gradlew" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootmicroservicewrapperwithtests/models/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootmicroservicewrapperwithtests/models/Fav.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/springbootmicroservicewrapperwithtests/repositories/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/springbootmicroservicewrapperwithtests/repositories/FavRepository.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/springbootmicroservicewrapperwithtests/features/UsersApiFeatureTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/example/springbootmicroservicewrapperwithtests/features/FavsApiFeatureTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/springbootmicroservicewrapperwithtests/features/UsersUIFeatureTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/example/springbootmicroservicewrapperwithtests/features/FavsUIFeatureTest.java" />
+      <change beforePath="$PROJECT_DIR$/tunr-ui/README.md" afterPath="$PROJECT_DIR$/tunr-ui/README.md" />
+      <change beforePath="$PROJECT_DIR$/users-api/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/build.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/docker-compose.test.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/gradlew" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/gradlew.bat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/UsersApiApplication.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/controllers/UsersController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/models/User.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/repositories/UserRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/resources/application-dev.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/resources/application.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/resources/db/migration/V1__Add_Users_table.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/test/java/com/example/usersapi/DemoApplicationTests.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/test/java/com/example/usersapi/controllers/UsersControllerTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/test/java/com/example/usersapi/repositories/UserRepositoryTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/test/resources/application.properties" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -32,18 +64,7 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/models/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,14 +106,6 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="runUsersAPITests" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="waitForUsersAPI" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Displays the sub-projects of root project 'SECA_P3_Backend'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
@@ -105,6 +118,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="allTests" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="runFavsAPITests" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles a jar archive containing the main classes." />
@@ -282,6 +299,10 @@
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="waitForFavsAPI" />
+              </ExternalTaskPojo>
             </list>
           </value>
         </entry>
@@ -289,8 +310,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="3043110384000" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="3393525669" />
+        <entry key="$PROJECT_DIR$" value="3043737314000" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="251833790" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="3442123891" />
       </map>
     </option>
@@ -505,11 +526,20 @@
         <entry key="$PROJECT_DIR$/../SECA-Project2A" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../SECA-Project2A/eureka-server" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../SECA-Project2ML" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+        <entry key="$PROJECT_DIR$" value="IMPORT" />
+        <entry key="$PROJECT_DIR$/favs-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/users-api" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../SECA_Project2B" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../SECA_Project2B/sleep-api" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../SECA_Project2B/sleeps-api" value="PREVIEW" />
       </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -517,7 +547,6 @@
     <option name="width" value="1440" />
     <option name="height" value="811" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -533,7 +562,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -556,82 +584,47 @@
             <path>
               <item name="SECA_P3_Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="SECA_P3_Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="users-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SECA_P3_Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SECA_P3_Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="users-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SECA_P3_Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SECA_P3_Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="users-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SECA_P3_Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SECA_P3_Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="users-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SECA_P3_Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="SECA_P3_Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="users-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="springbootmicroservicewrapperwithtests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SECA_P3_Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="SECA_P3_Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="users-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SECA_P3_Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SECA_P3_Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="users-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="usersapi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SECA_P3_Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SECA_P3_Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="users-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="usersapi" type="462c0819:PsiDirectoryNode" />
+              <item name="springbootmicroservicewrapperwithtests" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SECA_P3_Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SECA_P3_Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springbootmicroservicewrapperwithtests" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -735,11 +728,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="487003b8-aa6c-4920-b125-4fb81b35ec72" name="Default" comment="" />
-      <created>1522034564187</created>
+      <changelist id="a2dc9c30-dfb3-432e-85a5-0fdae1873ce2" name="Default" comment="" />
+      <created>1522202527373</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1522034564187</updated>
+      <updated>1522202527373</updated>
     </task>
     <servers />
   </component>
@@ -761,7 +754,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20600858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26037195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -786,15 +779,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tunr-ui/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-147">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/UsersApiApplication.java">
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -802,10 +787,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/models/User.java">
+    <entry file="file://$PROJECT_DIR$/build/reports/tests/1522183064858.0.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="-2193">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/springbootmicroservicewrapperwithtests/repositories/FavRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
           <folding />
         </state>
       </provider>

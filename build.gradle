@@ -43,12 +43,12 @@ dependencies {
     runtime 'org.springframework.boot:spring-boot-devtools'
 }
 
-task waitForUsersAPI(type: Exec) {
-    commandLine './wait-for-api.sh', 'http://localhost:8080/users', 'Users API'
+task waitForFavsAPI(type: Exec) {
+    commandLine './wait-for-api.sh', 'http://localhost:8080/favs', 'Favs API'
 }
 
-task runUsersAPITests(type: Exec) {
-    workingDir './users-api'
+task runFavsAPITests(type: Exec) {
+    workingDir './favs-api'
     commandLine './gradlew', 'test'
 }
 
@@ -64,7 +64,7 @@ task stopUIDevServer(type: Exec) {
 
 test {
     dependsOn cleanTest
-    dependsOn waitForUsersAPI
+    dependsOn waitForFavsAPI
     dependsOn startUIDevServer
 
     testLogging {
@@ -79,9 +79,9 @@ test.finalizedBy(composeDown)
 
 task allTests(type: Test) {
     dependsOn cleanTest
-    dependsOn waitForUsersAPI
+    dependsOn waitForFavsAPI
     dependsOn startUIDevServer
-    dependsOn runUsersAPITests
+    dependsOn runFavsAPITests
 
     testLogging {
         exceptionFormat "full"

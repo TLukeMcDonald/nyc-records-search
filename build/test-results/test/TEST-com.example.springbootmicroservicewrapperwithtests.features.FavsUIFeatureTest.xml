@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-03-27T20:37:35" hostname="173-4-0-23.pools.static.spcsdns.net" time="10.107">
+  <properties/>
+  <testcase name="shouldAllowFullCrudFunctionalityForAUser" classname="com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest" time="10.107">
+    <failure message="ListSizeMismatch : expected: = 2, actual: 0, collection: [data-fav-display]&#10;Elements: []&#10;Screenshot: file:/Users/lukemcdonald/wdi2/projects/SECA_P3_Backend/build/reports/tests/1522183064858.0.png&#10;Page source: file:/Users/lukemcdonald/wdi2/projects/SECA_P3_Backend/build/reports/tests/1522183064858.0.html&#10;Timeout: 6 s." type="com.codeborne.selenide.ex.ListSizeMismatch">ListSizeMismatch : expected: = 2, actual: 0, collection: [data-fav-display]
+Elements: []
+Screenshot: file:/Users/lukemcdonald/wdi2/projects/SECA_P3_Backend/build/reports/tests/1522183064858.0.png
+Page source: file:/Users/lukemcdonald/wdi2/projects/SECA_P3_Backend/build/reports/tests/1522183064858.0.html
+Timeout: 6 s.
+	at com.codeborne.selenide.collections.ListSize.fail(ListSize.java:24)
+	at com.codeborne.selenide.ElementsCollection.waitUntil(ElementsCollection.java:98)
+	at com.codeborne.selenide.ElementsCollection.should(ElementsCollection.java:57)
+	at com.codeborne.selenide.ElementsCollection.shouldHave(ElementsCollection.java:48)
+	at com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest.shouldAllowFullCrudFunctionalityForAUser(FavsUIFeatureTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+  </testcase>
+  <system-out><![CDATA[2018-03-27 16:37:35.190  INFO 42789 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest], using SpringBootContextLoader
+2018-03-27 16:37:35.191  INFO 42789 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-03-27 16:37:35.192  INFO 42789 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest]: FavsUIFeatureTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-03-27 16:37:35.196  INFO 42789 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.springbootmicroservicewrapperwithtests.DemoApplication for test class com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest
+2018-03-27 16:37:35.202  INFO 42789 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-03-27 16:37:35.204  INFO 42789 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3720efb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@676aa05d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2d90e635, org.springframework.test.context.support.DirtiesContextTestExecutionListener@771a0a48, org.springframework.test.context.transaction.TransactionalTestExecutionListener@640cc786, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@56d6fb12, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7cdd1eb3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5bb2032a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5900df2d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@38efb174, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2cd3085c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6733e5bf]
+2018-03-27 16:37:35.605  INFO 42789 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Reading https://chromedriver.storage.googleapis.com/ to seek [chromedriver]
+2018-03-27 16:37:35.937  INFO 42789 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Latest version of [chromedriver] is 2.37
+2018-03-27 16:37:35.997  INFO 42789 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as /Users/lukemcdonald/.m2/repository/webdriver/chromedriver/mac64/2.37/chromedriver
+2018-03-27 16:37:37.608  INFO 42789 --- [ null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: OSS
+2018-03-27 16:37:37.748  WARN 42789 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : Cannot maximize ChromeDriver: java.awt.HeadlessException
+2018-03-27 16:37:37.750  INFO 42789 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : BrowserName=chrome Version=65.0.3325.181 Platform=MAC
+2018-03-27 16:37:37.750  INFO 42789 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : Selenide v. 4.10.01
+2018-03-27 16:37:37.754  INFO 42789 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : Selenium WebDriver v. 3.9.1 build time: 2018-02-07T22:25:02.294Z
+2018-03-27 16:37:37.759  INFO 42789 --- [    Test worker] c.c.s.i.WebDriverThreadLocalContainer    : Create webdriver in current thread 10: ChromeDriver -> ChromeDriver: chrome on MAC (8a8c1d999de87b82b88f6b0bd04a5950)
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 2.37.543654 (a46b62e9900f5ac48951f8ad68d9e03eded4cc8d) on port 44344
+Only local connections are allowed.
+]]></system-err>
+</testsuite>
