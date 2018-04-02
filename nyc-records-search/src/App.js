@@ -64,7 +64,7 @@ class App extends Component {
 getFavs(){
   console.log({"get Favs":this.state.favs});
   axios
-   .get("/favs")
+   .get(process.env.REACT_APP_HOST+"/favs")
    .then(response => {
      this.setState({ favs: response.data, favsLoaded: true });
      console.log({ resp: response.data});
@@ -102,7 +102,7 @@ getFavs(){
   };
 
 
-  // //save id and title to database 
+  // //save id and title to database
   // saveId = async (newFav) => {
   //  // debugger
   //   console.log(newFav)
@@ -112,7 +112,7 @@ getFavs(){
   //   data.append("shortTitle", "This really sucks");
   //   //console.log("save id " + id + ", title is " + title );
   //   try {
-  //     const newFavResponse = await axios.post(`/favs`, data, axiosConfig)
+  //     const newFavResponse = await axios.post(process.env.REACT_APP_HOST+`/favs`, data, axiosConfig)
   //   }
   //   catch(error){
   //     console.log('Error saving favorite ' + newFav.userFav)
@@ -125,7 +125,7 @@ getFavs(){
 
 //   saveId(newFav){
 //     console.log(newFav)
-//     axios.post(`/favs`, {
+//     axios.post(process.env.REACT_APP_HOST+`/favs`, {
 //       headers: {
 //         "Content-Type": "application/json"
 //     },
@@ -147,7 +147,7 @@ getFavs(){
 // try with fetch
  saveId(newFav) {
   console.log('Posting request via fetch ' + newFav.userFav);
-  fetch("/favs", {
+  fetch(process.env.REACT_APP_HOST+"/favs", {
     method: "post",
     headers: {
       "Content-Type": "application/json"
@@ -162,10 +162,10 @@ getFavs(){
 
 
 
-  // delete favorite article from list 
+  // delete favorite article from list
   deleteFav = async (id, index) => {
     try {
-      await axios.delete(`/favs/${id}`)
+      await axios.delete(process.env.REACT_APP_HOST+`/favs/${id}`)
 
       const updatedFavList = [...this.state.favs]
       updatedFavList.splice(index, 1)
@@ -175,7 +175,7 @@ getFavs(){
             console.log(`Error deleting Favorite with ID of ${id}`);
             console.log(error)
         }
-  } 
+  }
 
 
   //set section name filter .. not working till after api call for some reason
