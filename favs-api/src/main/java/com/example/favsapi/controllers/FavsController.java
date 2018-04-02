@@ -44,6 +44,7 @@ public class FavsController {
 
 	@PostMapping("/")
 	public Fav createNewFav(@RequestBody Fav newFav){
+
         System.out.println(newFav);
         return favRepository.save(newFav);
     }

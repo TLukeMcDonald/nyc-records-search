@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">10.107s</div>
+<div class="counter">8.694s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,8 +81,8 @@
 <span class="code">
 <pre>ListSizeMismatch : expected: = 2, actual: 0, collection: [data-fav-display]
 Elements: []
-Screenshot: file:/Users/lukemcdonald/wdi2/projects/SECA_P3_Backend/build/reports/tests/1522183064858.0.png
-Page source: file:/Users/lukemcdonald/wdi2/projects/SECA_P3_Backend/build/reports/tests/1522183064858.0.html
+Screenshot: file:/Users/lukemcdonald/wdi2/projects/SECA_P3_Backend/build/reports/tests/1522355319036.0.png
+Page source: file:/Users/lukemcdonald/wdi2/projects/SECA_P3_Backend/build/reports/tests/1522355319036.0.html
 Timeout: 6 s.
 	at com.codeborne.selenide.collections.ListSize.fail(ListSize.java:24)
 	at com.codeborne.selenide.ElementsCollection.waitUntil(ElementsCollection.java:98)
@@ -158,7 +158,7 @@ Timeout: 6 s.
 </thead>
 <tr>
 <td class="failures">shouldAllowFullCrudFunctionalityForAUser</td>
-<td>10.107s</td>
+<td>8.694s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -166,28 +166,28 @@ Timeout: 6 s.
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2018-03-27 16:37:35.190  INFO 42789 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest], using SpringBootContextLoader
-2018-03-27 16:37:35.191  INFO 42789 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2018-03-27 16:37:35.192  INFO 42789 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest]: FavsUIFeatureTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2018-03-27 16:37:35.196  INFO 42789 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.springbootmicroservicewrapperwithtests.DemoApplication for test class com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest
-2018-03-27 16:37:35.202  INFO 42789 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2018-03-27 16:37:35.204  INFO 42789 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3720efb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@676aa05d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2d90e635, org.springframework.test.context.support.DirtiesContextTestExecutionListener@771a0a48, org.springframework.test.context.transaction.TransactionalTestExecutionListener@640cc786, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@56d6fb12, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7cdd1eb3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5bb2032a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5900df2d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@38efb174, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2cd3085c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6733e5bf]
-2018-03-27 16:37:35.605  INFO 42789 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Reading https://chromedriver.storage.googleapis.com/ to seek [chromedriver]
-2018-03-27 16:37:35.937  INFO 42789 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Latest version of [chromedriver] is 2.37
-2018-03-27 16:37:35.997  INFO 42789 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as /Users/lukemcdonald/.m2/repository/webdriver/chromedriver/mac64/2.37/chromedriver
-2018-03-27 16:37:37.608  INFO 42789 --- [ null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: OSS
-2018-03-27 16:37:37.748  WARN 42789 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : Cannot maximize ChromeDriver: java.awt.HeadlessException
-2018-03-27 16:37:37.750  INFO 42789 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : BrowserName=chrome Version=65.0.3325.181 Platform=MAC
-2018-03-27 16:37:37.750  INFO 42789 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : Selenide v. 4.10.01
-2018-03-27 16:37:37.754  INFO 42789 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : Selenium WebDriver v. 3.9.1 build time: 2018-02-07T22:25:02.294Z
-2018-03-27 16:37:37.759  INFO 42789 --- [    Test worker] c.c.s.i.WebDriverThreadLocalContainer    : Create webdriver in current thread 10: ChromeDriver -&gt; ChromeDriver: chrome on MAC (8a8c1d999de87b82b88f6b0bd04a5950)
+<pre>2018-03-29 16:28:30.629  INFO 8630 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest], using SpringBootContextLoader
+2018-03-29 16:28:30.629  INFO 8630 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-03-29 16:28:30.630  INFO 8630 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest]: FavsUIFeatureTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-03-29 16:28:30.637  INFO 8630 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.springbootmicroservicewrapperwithtests.DemoApplication for test class com.example.springbootmicroservicewrapperwithtests.features.FavsUIFeatureTest
+2018-03-29 16:28:30.644  INFO 8630 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-03-29 16:28:30.646  INFO 8630 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@51869615, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1c86ee29, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@33e2d66a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@bc8d78d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6e1bcedf, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@45479293, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@60335dd7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2d8a8ae3, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1d57d4bb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@647d1e88, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1eda2a35, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@677e669f]
+2018-03-29 16:28:30.953  INFO 8630 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Reading https://chromedriver.storage.googleapis.com/ to seek [chromedriver]
+2018-03-29 16:28:31.255  INFO 8630 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Latest version of [chromedriver] is 2.37
+2018-03-29 16:28:31.278  INFO 8630 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as /Users/lukemcdonald/.m2/repository/webdriver/chromedriver/mac64/2.37/chromedriver
+2018-03-29 16:28:32.448  INFO 8630 --- [ null to remote] o.o.selenium.remote.ProtocolHandshake    : Detected dialect: OSS
+2018-03-29 16:28:32.529  WARN 8630 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : Cannot maximize ChromeDriver: java.awt.HeadlessException
+2018-03-29 16:28:32.531  INFO 8630 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : BrowserName=chrome Version=65.0.3325.181 Platform=MAC
+2018-03-29 16:28:32.532  INFO 8630 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : Selenide v. 4.10.01
+2018-03-29 16:28:32.533  INFO 8630 --- [    Test worker] c.c.selenide.webdriver.WebDriverFactory  : Selenium WebDriver v. 3.9.1 build time: 2018-02-07T22:25:02.294Z
+2018-03-29 16:28:32.534  INFO 8630 --- [    Test worker] c.c.s.i.WebDriverThreadLocalContainer    : Create webdriver in current thread 10: ChromeDriver -&gt; ChromeDriver: chrome on MAC (b1a189ea48e6d1cb58dd046556c38f73)
 </pre>
 </span>
 </div>
 <div id="tab3" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Starting ChromeDriver 2.37.543654 (a46b62e9900f5ac48951f8ad68d9e03eded4cc8d) on port 44344
+<pre>Starting ChromeDriver 2.37.543654 (a46b62e9900f5ac48951f8ad68d9e03eded4cc8d) on port 31864
 Only local connections are allowed.
 </pre>
 </span>
@@ -200,7 +200,7 @@ Only local connections are allowed.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 3.5.1</a> at Mar 27, 2018 4:37:45 PM</p>
+<a href="http://www.gradle.org">Gradle 3.5.1</a> at Mar 29, 2018 4:28:39 PM</p>
 </div>
 </div>
 </body>
