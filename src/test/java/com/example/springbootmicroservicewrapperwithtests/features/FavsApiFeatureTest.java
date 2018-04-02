@@ -19,6 +19,26 @@ import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.core.Is.is;
 
+
+
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import static io.restassured.http.ContentType.JSON;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.core.Is.is;
+
+
+
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class FavsApiFeatureTest {
@@ -187,6 +207,40 @@ public class FavsApiFeatureTest {
                 .statusCode(is(200));
     }
 
-    
+
+
+    ////////////////
+    @Test
+    public void shoulWork() throws Exception {
+        //creates a Fav
+        Fav firstFav = new Fav(
+                "20151222104",
+                "Final Amendments to OER Program Rule and Brownfield Incentive Grant Rule"
+        );
+
+        Fav secondFav = new Fav(
+                "20131010106",
+                "BOARD MEETINGS"
+        );
+
+
+        Stream.of(firstFav, secondFav)
+                .forEach(fav -> {
+                    favRepository.save(fav);
+                });
+
+
+
+
+        // Test updating a user
+        secondFav.setUserFav("0987654321");
+
+        given()
+                .contentType(JSON)
+                .and().body(secondFav)
+                .when()
+                .patch("http://localhost:8080/favs/" + secondFav.getId())
+                .then()
+                .statusCode(is(200))
 
 }
