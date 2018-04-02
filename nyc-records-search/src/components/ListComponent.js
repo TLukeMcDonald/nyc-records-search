@@ -85,22 +85,22 @@ class ListComponent extends Component {
     this.setState({ selection });
   };
 
-  toggleAll = () => {
-    /* 'toggleAll' is a tricky concept with any filterable table do you just select ALL the records that are in your data? OR do you only select ALL the records that are in the current filtered data? The latter makes more sense because 'selection' is a visual thing for the user. This is especially true if you are going to implement a set of external functions that act on the selected information (you would not want to DELETE the wrong thing!). So, to that end, access to the internals of ReactTable are required to get what is currently visible in the table (either on the current page or any other page). The HOC provides a method call 'getWrappedInstance' to get a ref to the wrapped ReactTable and then get the internal state and the 'sortedData'. That can then be iterrated to get all the currently visible records and set the selection state. */
-    const selectAll = this.state.selectAll ? false : true;
-    const selection = [];
-    if (selectAll) {
-      // we need to get at the internals of ReactTable
-      const wrappedInstance = this.checkboxTable.getWrappedInstance();
-      // the 'sortedData' property contains the currently accessible records based on the filter and sort
-      const currentRecords = wrappedInstance.getResolvedState().sortedData;
-      // we just push all the IDs onto the selection array
-      currentRecords.forEach(item => {
-        selection.push(item.request_id);
-      });
-    }
-    this.setState({ selectAll, selection });
-  };
+  // toggleAll = () => {
+  //   /* 'toggleAll' is a tricky concept with any filterable table do you just select ALL the records that are in your data? OR do you only select ALL the records that are in the current filtered data? The latter makes more sense because 'selection' is a visual thing for the user. This is especially true if you are going to implement a set of external functions that act on the selected information (you would not want to DELETE the wrong thing!). So, to that end, access to the internals of ReactTable are required to get what is currently visible in the table (either on the current page or any other page). The HOC provides a method call 'getWrappedInstance' to get a ref to the wrapped ReactTable and then get the internal state and the 'sortedData'. That can then be iterrated to get all the currently visible records and set the selection state. */
+  //   const selectAll = this.state.selectAll ? false : true;
+  //   const selection = [];
+  //   if (selectAll) {
+  //     // we need to get at the internals of ReactTable
+  //     const wrappedInstance = this.checkboxTable.getWrappedInstance();
+  //     // the 'sortedData' property contains the currently accessible records based on the filter and sort
+  //     const currentRecords = wrappedInstance.getResolvedState().sortedData;
+  //     // we just push all the IDs onto the selection array
+  //     currentRecords.forEach(item => {
+  //       selection.push(item.request_id);
+  //     });
+  //   }
+  //   this.setState({ selectAll, selection });
+  // };
 
   isSelected = key => {
     /* Instead of passing our external selection state we provide an 'isSelected' callback and detect the selection state ourselves. This allows any implementation for selection (either an array, object keys, or even a Javascript Set object). */

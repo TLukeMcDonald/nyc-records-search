@@ -64,7 +64,7 @@ class App extends Component {
 getFavs(){
   console.log({"get Favs":this.state.favs});
   axios
-    .get("http://ec2-54-175-184-18.compute-1.amazonaws.com:8080/favs")
+    .get(process.env.REACT_APP_HOST + "/favs")
     .then(response => {
       this.setState({ favs: response.data, favsLoaded: true });
       console.log({ resp: response.data });
@@ -147,7 +147,7 @@ getFavs(){
 // try with fetch
  saveId(newFav) {
   console.log('Posting request via fetch ' + newFav.userFav);
-  fetch("http://ec2-54-175-184-18.compute-1.amazonaws.com:8080/favs", {
+  fetch(process.env.REACT_APP_HOST + "/favs", {
     method: "post",
     headers: {
       "Content-Type": "application/json"
@@ -165,7 +165,7 @@ getFavs(){
   // delete favorite article from list
   deleteFav = async (id, index) => {
     try {
-      await axios.delete(`http://ec2-54-175-184-18.compute-1.amazonaws.com:8080/favs/${id}`)
+      await axios.delete(process.env.REACT_APP_HOST + `/favs/${id}`)
 
       // const updatedFavList = [...this.state.favs]
       // updatedFavList.splice(index, 1)
