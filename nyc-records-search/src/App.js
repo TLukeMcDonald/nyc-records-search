@@ -170,7 +170,7 @@ getFavs(){
       // const updatedFavList = [...this.state.favs]
       // updatedFavList.splice(index, 1)
       // this.setState({favs: updatedFavList})
-    } { await    getFavs();
+     await    this.getFavs();
     } catch(error) {
             console.log(`Error deleting Favorite with ID of ${id}`);
             console.log(error)
