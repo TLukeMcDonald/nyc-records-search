@@ -241,6 +241,6 @@ public class FavsApiFeatureTest {
                 .when()
                 .patch("http://localhost:8080/favs/" + secondFav.getId())
                 .then()
-                .statusCode(is(200))
-
+                .statusCode(is(200));
+        }
 }
