@@ -64,7 +64,7 @@ class App extends Component {
 getFavs(){
   console.log({"get Favs":this.state.favs});
   axios
-    .get("http://ec2-54-89-50-199.compute-1.amazonaws.com:8080/favs")
+    .get("http://ec2-54-175-184-18.compute-1.amazonaws.com:8080/favs")
     .then(response => {
       this.setState({ favs: response.data, favsLoaded: true });
       console.log({ resp: response.data });
@@ -147,7 +147,7 @@ getFavs(){
 // try with fetch
  saveId(newFav) {
   console.log('Posting request via fetch ' + newFav.userFav);
-  fetch("http://ec2-54-89-50-199.compute-1.amazonaws.com:8080/favs", {
+  fetch("http://ec2-54-175-184-18.compute-1.amazonaws.com:8080/favs", {
     method: "post",
     headers: {
       "Content-Type": "application/json"
@@ -165,16 +165,17 @@ getFavs(){
   // delete favorite article from list
   deleteFav = async (id, index) => {
     try {
-      await axios.delete(`http://ec2-54-89-50-199.compute-1.amazonaws.com:8080/favs/${id}`)
+      await axios.delete(`http://ec2-54-175-184-18.compute-1.amazonaws.com:8080/favs/${id}`)
 
-      const updatedFavList = [...this.state.favs]
-      updatedFavList.splice(index, 1)
-      this.setState({favs: updatedFavList})
-
+      // const updatedFavList = [...this.state.favs]
+      // updatedFavList.splice(index, 1)
+      // this.setState({favs: updatedFavList})
+    } { await    getFavs();
     } catch(error) {
             console.log(`Error deleting Favorite with ID of ${id}`);
             console.log(error)
         }
+     
   }
 
 
@@ -238,6 +239,7 @@ getFavs(){
         getFavList={this.getFavList}
         favs={this.state.favs}
         deleteFav={this.deleteFav}
+        favsLoaded={this.state.favsLoaded}
         {...this.props}
       />
     );
@@ -351,7 +353,7 @@ getFavs(){
             <Route exact path="/materials" component={Materials} />
             <Route exact path="/personnel" component={Personnel} />
             {this.state.singleLoaded ? ( <Route path="/single" component={Single} /> ) : ( <p>... Loading</p>  )}
-            {this.state.favsLoaded ? ( <Route exact path="/userProfile" component={UserProfileComponent} />  ) : (<p>... Loading</p> )}
+            <Route exact path="/userProfile" component={UserProfileComponent} /> 
           </Switch>
         </div>
       </Router>
