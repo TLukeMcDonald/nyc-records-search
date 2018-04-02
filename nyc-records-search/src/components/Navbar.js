@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import crest from "./crest.svg";
 
@@ -9,6 +9,7 @@ import crest from "./crest.svg";
 class Navbar extends Component {
 
   render() {
+    console.log({nav : this.props})
     return <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="http://tlukemcdonald.com" rel="noopener noreferrer" target="_blank">
@@ -27,34 +28,35 @@ class Navbar extends Component {
               <a className="nav-item nav-link" href="/userProfile">
                 User Favorites
               </a>
-              <a className="nav-item nav-link" onClick={e => this.props.setSection("Public Hearings and Meetings", e)} href="/public">
+              <Link className="nav-item nav-link" onClick={e => this.props.setSection("Public Hearings and Meetings", e)} to="/public">
                 Public Hearings and Meetings
-              </a>
-              <a className="nav-item nav-link" href="/procurement">
+              </Link>
+
+              <Link className="nav-item nav-link" onClick={e => this.props.setSection("Procurement", e)} to="/procurement">
                 Procurement
-              </a>
-              <a className="nav-item nav-link" href="/award">
+              </Link>
+              <Link className="nav-item nav-link" onClick={e => this.props.setSection("Contract Award Hearings", e)} to="/award">
                 Contract Award Hearings
-              </a>
-              <a className="nav-item nav-link" href="/rules">
+              </Link>
+              <Link className="nav-item nav-link" onClick={e => this.props.setSection("Agency Rules", e)} to="/rules">
                 Agency Rules
-              </a>
-              <a className="nav-item nav-link" href="/property">
+              </Link>
+              <Link className="nav-item nav-link" onClick={e => this.props.setSection("Property Disposition", e)} to="/property">
                 Property Disposition
-              </a>
-              <a className="nav-item nav-link" href="/court">
+              </Link>
+              <Link className="nav-item nav-link" onClick={e => this.props.setSection("Court Notices", e)} to="/court">
                 Court Notices
-              </a>
-              <a className="nav-item nav-link" href="/materials">
+              </Link>
+              <Link className="nav-item nav-link" onClick={e => this.props.setSection("Special Materials", e)} to="/materials">
                 Special Materials
-              </a>
-              <a className="nav-item nav-link" href="/personnel">
+              </Link>
+              <Link className="nav-item nav-link" onClick={e => this.props.setSection("Changes in Personnel", e)} to="/personnel">
                 Changes in Personnel
-              </a>
+              </Link>
             </div>
           </div>
         </nav>
-      </div>;
+      </div>; 
   }
 }
 

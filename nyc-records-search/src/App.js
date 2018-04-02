@@ -162,8 +162,6 @@ getFavs(){
 
 
 
-
-
   // delete favorite article from list 
   deleteFav = async (id, index) => {
     try {
@@ -178,7 +176,6 @@ getFavs(){
             console.log(error)
         }
   } 
-
 
 
   //set section name filter .. not working till after api call for some reason
@@ -340,7 +337,7 @@ getFavs(){
       <Router>
         <div>
           <div>
-            <MyNavbar setSection={this.setFilterSection} />
+            <MyNavbar setSection={this.setFilterSection}  />
           </div>
           <Switch>
             <Route exact path="/" component={HomeComponent} />

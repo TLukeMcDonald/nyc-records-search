@@ -20,13 +20,16 @@
   - Refactored Backend and testing from Users to Favs
 
 ## Installation instructions.
-  - 
-  - Yarn start for frontend
-  - Docker-Compose up for backend 
+  - 'NPM i'
+  - 'npm start' for frontend
+  - 'Docker-Compose up' for backend 
 
 ## Unsolved problems.
  - Feature testing in Selenium
+ - Getting Docker to boot up React
 
 
 ## Your biggest wins and challenges.
- - 
+ - Wins:
+    - Got Microservices, testing, and React -Table all working.
+    - Biggest challenge was feature test and working with AutoWire.

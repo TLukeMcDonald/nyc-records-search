@@ -12,7 +12,8 @@ class UserProfile extends Component {
         <h1> {this.props.userName}'s Favorites</h1>
         {this.props.favs.map(fav => { return  <div key={fav.id}>
           <p>  {fav.userFav}  {" | "}
-          {fav.shortTitle} <button type="button" onClick={()=> this.props.deleteFav(fav.id)}    className="btn btn-secondary btn-sm">
+         <Link to="/single"> {fav.shortTitle} </Link>
+          <button type="button" onClick={()=> this.props.deleteFav(fav.id)}    className="btn btn-secondary btn-sm">
             Delete
           </button></p>
           </div>

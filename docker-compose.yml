@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+
   eureka:
       image: anapsix/alpine-java:8_jdk_unlimited
       ports:
@@ -41,19 +42,19 @@ services:
           - GRADLE_USER_HOME=cache
           - SPRING_PROFILES_ACTIVE=dev
 
-#  nyc-records-search:
-#        image: node:latest
-#        build: ./nyc-records-search
-#        ports:
-#          - 3000:3000
-#        working_dir: /nyc-records-search
-#        volumes:
-#          - ./nyc-records-search:/nyc-records-search
-#        command: 'yarn start'
-#        depends_on:
-#          - eureka
-#          - postgresdev
-#          - favs-api
+  # nyc-records-search:
+  #       image: node:latest
+  #       build: ./nyc-records-search
+  #       ports:
+  #         - 3000:3000
+  #       working_dir: /nyc-records-search
+  #       volumes:
+  #         - ./nyc-records-search:/nyc-records-search
+  #       command: 'npm start'
+  #       depends_on:
+  #         - eureka
+  #         - postgresdev
+  #         - favs-api
 
   postgresdev:
       image: postgres

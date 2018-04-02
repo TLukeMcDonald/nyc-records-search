@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import axios from "axios";
 import ReactTable from "react-table";
 import "react-table/react-table.css";
-import checkboxHOC from "react-table/lib/hoc/selectTable";
+//import checkboxHOC from "react-table/lib/hoc/selectTable";
 
 
 
@@ -30,7 +30,7 @@ class ListComponent extends Component {
         { Header: "Request Id", accessor: "request_id" }
       ],
     };
-    this.renderEditable = this.renderEditable.bind(this);
+    //this.renderEditable = this.renderEditable.bind(this);
   }
 
   getApiInfo2() {
@@ -64,47 +64,6 @@ class ListComponent extends Component {
       });
   }
 
-  renderEditable(cellInfo) {
-    return (
-      <div
-        style={{ backgroundColor: "#fafafa" }}
-        contentEditable
-        suppressContentEditableWarning
-        onBlur={e => {
-          const data = [...this.state.recordInfo];
-          data[cellInfo.index][cellInfo.column.id] = e.target.innerHTML;
-          this.setState({ recordInfo: cellInfo });
-        }}
-        dangerouslySetInnerHTML={{
-          __html: this.state.recordInfo[cellInfo.index][cellInfo.column.id]
-        }}
-      />
-    );
-  }
-
- getData() {
-    const data = this.props.map(item => {
-      const _id = "hi";
-      return {
-        _id,
-        ...item
-      };
-    });
-    return data;
-}
-
-  getColumns(data){
-    const columns = [];
-    Object.keys(this.state.recordInfo).forEach((key)=>{
-      if(key!=='_id') {
-        columns.push({
-          accessor: key,
-          Header: key,
-        })
-      }
-    })
-    return columns;
-  }
 
   toggleSelection = (key, shift, row) => {
     /* Implementation of how to manage the selection state is up to the developer. This implementation uses an array stored in the component state. Other implementations could use object keys, a Javascript Set, or Redux... etc. */
@@ -160,7 +119,7 @@ class ListComponent extends Component {
 
   render() {
     console.log({ "list props": this.props });
-    const CheckboxTable = checkboxHOC(ReactTable);
+   // const CheckboxTable = checkboxHOC(ReactTable);
     const data = this.state.recordInfo;
     const { toggleSelection, toggleAll, isSelected } = this;
     const {  columns, selectAll } = this.state;
@@ -171,9 +130,8 @@ class ListComponent extends Component {
   return <div>
       <h1>{this.props.filters.section_name} List</h1>
       {this.state.recordLoaded ? <div>
-          <button onClick={this.logSelection}>Log Selection</button>
 
-          <CheckboxTable ref={r => (this.checkboxTable = r)} data={data} columns={columns} defaultPageSize={10} className="-striped -highlight" showPaginationTop {...checkboxProps} getTdProps={(state, rowInfo, column, instance) => {
+          <ReactTable ref={r => (this.checkboxTable = r)} data={data} columns={columns} defaultPageSize={10} className="-striped -highlight" showPaginationTop {...checkboxProps} getTdProps={(state, rowInfo, column, instance) => {
               return { onClick: (e, handleOriginal) => {
                   console.log("It was in this row:", rowInfo);
                   console.log(rowInfo.row.request_id, " was clicked.");
