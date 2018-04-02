@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+
   eureka:
       image: anapsix/alpine-java:8_jdk_unlimited
       ports:
@@ -12,6 +13,7 @@ services:
       environment:
         - GRADLE_USER_HOME=cache
         - SPRING_PROFILES_ACTIVE=dev
+
   api-gateway:
       image: anapsix/alpine-java:8_jdk_unlimited
       ports:
@@ -25,19 +27,35 @@ services:
       environment:
         - GRADLE_USER_HOME=cache
         - SPRING_PROFILES_ACTIVE=dev
-  users-api:
+
+  favs-api:
         image: anapsix/alpine-java:8_jdk_unlimited
         ports:
           - '8081:8081'
-        working_dir: /users-api
+        working_dir: /favs-api
         volumes:
-          - ./users-api:/users-api
+          - ./favs-api:/favs-api
         depends_on:
           - postgresdev
         command: './gradlew bootRun'
         environment:
           - GRADLE_USER_HOME=cache
           - SPRING_PROFILES_ACTIVE=dev
+
+  # nyc-records-search:
+  #       image: node:latest
+  #       build: ./nyc-records-search
+  #       ports:
+  #         - 3000:3000
+  #       working_dir: /nyc-records-search
+  #       volumes:
+  #         - ./nyc-records-search:/nyc-records-search
+  #       command: 'npm start'
+  #       depends_on:
+  #         - eureka
+  #         - postgresdev
+  #         - favs-api
+
   postgresdev:
       image: postgres
       ports:

@@ -43,29 +43,29 @@ dependencies {
     runtime 'org.springframework.boot:spring-boot-devtools'
 }
 
-task waitForUsersAPI(type: Exec) {
-    commandLine './wait-for-api.sh', 'http://localhost:8080/users', 'Users API'
+task waitForFavsAPI(type: Exec) {
+    commandLine './wait-for-api.sh', 'http://localhost:8080/favs', 'Favs API'
 }
 
-task runUsersAPITests(type: Exec) {
-    workingDir './users-api'
+task runFavsAPITests(type: Exec) {
+    workingDir './favs-api'
     commandLine './gradlew', 'test'
 }
 
-task startUIDevServer(type: Exec) {
-    workingDir './tunr-ui'
-    commandLine 'pm2', 'start', 'node_modules/react-scripts/scripts/start.js', '-f', '--name', 'tunr-ui-test'
-}
+//task startUIDevServer(type: Exec) {
+//    workingDir './tunr-ui'
+//    commandLine 'pm2', 'start', 'node_modules/react-scripts/scripts/start.js', '-f', '--name', 'tunr-ui-test'
+//}
 
-task stopUIDevServer(type: Exec) {
-    workingDir './tunr-ui'
-    commandLine 'pm2', 'stop', 'tunr-ui-test'
-}
+//task stopUIDevServer(type: Exec) {
+//    workingDir './tunr-ui'
+//    commandLine 'pm2', 'stop', 'tunr-ui-test'
+//}
 
 test {
     dependsOn cleanTest
-    dependsOn waitForUsersAPI
-    dependsOn startUIDevServer
+    dependsOn waitForFavsAPI
+  //  dependsOn startUIDevServer
 
     testLogging {
         exceptionFormat "full"
@@ -74,14 +74,14 @@ test {
     }
 
 }
-test.finalizedBy(stopUIDevServer)
+//test.finalizedBy(stopUIDevServer)
 test.finalizedBy(composeDown)
 
 task allTests(type: Test) {
     dependsOn cleanTest
-    dependsOn waitForUsersAPI
-    dependsOn startUIDevServer
-    dependsOn runUsersAPITests
+    dependsOn waitForFavsAPI
+  //  dependsOn startUIDevServer
+    dependsOn runFavsAPITests
 
     testLogging {
         exceptionFormat "full"
@@ -89,7 +89,7 @@ task allTests(type: Test) {
         displayGranularity 2
     }
 }
-allTests.finalizedBy(stopUIDevServer)
+//allTests.finalizedBy(stopUIDevServer)
 allTests.finalizedBy(composeDown)
 
 dockerCompose {

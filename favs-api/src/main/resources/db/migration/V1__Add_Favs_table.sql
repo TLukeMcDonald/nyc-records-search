@@ -1,0 +1,5 @@
+create table FAVS (
+  ID serial,
+  REQUEST_ID VARCHAR(100) ,
+  SHORT_TITLE VARCHAR(3000) NOT NULL
+)
