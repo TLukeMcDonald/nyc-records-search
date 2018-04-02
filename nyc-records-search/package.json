@@ -6,6 +6,7 @@
     "@fortawesome/react-fontawesome": "^0.0.18",
     "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
+    "env": "^0.0.2",
     "jqrangeslider": "^5.7.5",
     "jquery": "^1.9.1",
     "popper.js": "^1.12.9",

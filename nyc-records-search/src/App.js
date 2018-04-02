@@ -64,12 +64,12 @@ class App extends Component {
 getFavs(){
   console.log({"get Favs":this.state.favs});
   axios
-   .get(process.env.REACT_APP_HOST+"/favs")
-   .then(response => {
-     this.setState({ favs: response.data, favsLoaded: true });
-     console.log({ resp: response.data});
-     console.log({ "after getFavs": this.state });
-   });
+    .get("http://ec2-54-89-50-199.compute-1.amazonaws.com:8080/favs")
+    .then(response => {
+      this.setState({ favs: response.data, favsLoaded: true });
+      console.log({ resp: response.data });
+      console.log({ "after getFavs": this.state });
+    });
   }
 
 
@@ -147,7 +147,7 @@ getFavs(){
 // try with fetch
  saveId(newFav) {
   console.log('Posting request via fetch ' + newFav.userFav);
-  fetch(process.env.REACT_APP_HOST+"/favs", {
+  fetch("http://ec2-54-89-50-199.compute-1.amazonaws.com:8080/favs", {
     method: "post",
     headers: {
       "Content-Type": "application/json"
@@ -165,7 +165,7 @@ getFavs(){
   // delete favorite article from list
   deleteFav = async (id, index) => {
     try {
-      await axios.delete(process.env.REACT_APP_HOST+`/favs/${id}`)
+      await axios.delete(`http://ec2-54-89-50-199.compute-1.amazonaws.com:8080/favs/${id}`)
 
       const updatedFavList = [...this.state.favs]
       updatedFavList.splice(index, 1)
@@ -350,8 +350,8 @@ getFavs(){
             <Route exact path="/court" component={Court} />
             <Route exact path="/materials" component={Materials} />
             <Route exact path="/personnel" component={Personnel} />
-            {this.state.favsLoaded ? ( <Route exact path="/userProfile" component={UserProfileComponent} />  ) : (<p>... Loading</p> )}
             {this.state.singleLoaded ? ( <Route path="/single" component={Single} /> ) : ( <p>... Loading</p>  )}
+            {this.state.favsLoaded ? ( <Route exact path="/userProfile" component={UserProfileComponent} />  ) : (<p>... Loading</p> )}
           </Switch>
         </div>
       </Router>
