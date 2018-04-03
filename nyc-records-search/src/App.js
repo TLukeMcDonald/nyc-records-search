@@ -102,63 +102,40 @@ getFavs(){
   };
 
 
-  // //save id and title to database
-  // saveId = async (newFav) => {
-  //  // debugger
-  //   console.log(newFav)
-  //   let axiosConfig = { headers: { "Content-Type": "application/json" } };
-  //   let data = new FormData();
-  //   data.append("userFav", "20141120137");
-  //   data.append("shortTitle", "This really sucks");
-  //   //console.log("save id " + id + ", title is " + title );
-  //   try {
-  //     const newFavResponse = await axios.post(process.env.REACT_APP_HOST+`/favs`, data, axiosConfig)
-  //   }
-  //   catch(error){
-  //     console.log('Error saving favorite ' + newFav.userFav)
-  //     console.log(error)
-  //     console.log(error.response.data)
-  //     console.log(error.request)
-  //   }
-  // }
+  //save id and title to database
+  saveId = async (newFav) => {
+   // debugger
+    console.log(newFav)
+    let axiosConfig = { headers: { "Content-Type": "application/json" } };
+    //console.log("save id " + id + ", title is " + title );
+    try {
+      const newFavResponse = await axios.post(process.env.REACT_APP_HOST+`/favs`, newFav, axiosConfig)
+    }
+    catch(error){
+      console.log('Error saving favorite ' + newFav.userFav)
+      console.log(error)
+      console.log(error.response.data)
+      console.log(error.request)
+    }
+  }
 
 
-//   saveId(newFav){
-//     console.log(newFav)
-//     axios.post(process.env.REACT_APP_HOST+`/favs`, {
-//       headers: {
-//         "Content-Type": "application/json"
+
+// // try with fetch
+//  saveId(newFav) {
+//   console.log('Posting request via fetch ' + newFav.userFav);
+//   fetch(process.env.REACT_APP_HOST + "/favs", {
+//     method: "post",
+//     headers: {
+//       "Content-Type": "application/json"
 //     },
-//     data: {
-//   "userFav":"20141120137",
-//   "shortTitle":"This really sucks"
-//     }
-// })
-//    .catch(error)
-//       console.log('Error saving favorite ' + newFav.userFav)
-//       console.log(error)
-//       console.log(error.response.data)
-//       console.log(error.request)
-//   }
-
-
-
-
-// try with fetch
- saveId(newFav) {
-  console.log('Posting request via fetch ' + newFav.userFav);
-  fetch(process.env.REACT_APP_HOST + "/favs", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(newFav)
-  })
-    .then(function(response) {
-      return response.json();
-    })
-    .catch(err => console.log(err));
-}
+//     body: JSON.stringify(newFav)
+//   })
+//     .then(function(response) {
+//       return response.json();
+//     })
+//     .catch(err => console.log(err));
+// }
 
 
 
