@@ -14,7 +14,7 @@ class UserProfile extends Component {
                 <p>
                   {" "}
                   {fav.userFav} {" | "}
-                  <Link to="/single"> {fav.shortTitle} </Link>
+                  <Link to="/single" onClick={() => this.props.getSingleInfo(fav.userFav)}  > {fav.shortTitle} </Link>
                   <button type="button" onClick={() => this.props.deleteFav(fav.id, fav.index)} className="btn btn-secondary btn-sm">
                     Delete
                   </button>

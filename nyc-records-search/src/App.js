@@ -73,15 +73,6 @@ getFavs(){
   }
 
 
-  // getFavList(){
-  //  let getFavListResults = this.state.favs.map(fav => {
-  //    let newRecords = this.getSingleInfo(fav)
-  //    console.log(newRecords);
-  //  })
-  // }
-
-
-
   // clear filters
   setFiltersNull = () => {
     console.log("clear filters");
@@ -120,25 +111,6 @@ getFavs(){
   }
 
 
-
-// // try with fetch
-//  saveId(newFav) {
-//   console.log('Posting request via fetch ' + newFav.userFav);
-//   fetch(process.env.REACT_APP_HOST + "/favs", {
-//     method: "post",
-//     headers: {
-//       "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify(newFav)
-//   })
-//     .then(function(response) {
-//       return response.json();
-//     })
-//     .catch(err => console.log(err));
-// }
-
-
-
   // delete favorite article from list
   deleteFav = async (id, index) => {
     try {
@@ -152,7 +124,6 @@ getFavs(){
             console.log(`Error deleting Favorite with ID of ${id}`);
             console.log(error)
         }
-     
   }
 
 
@@ -329,8 +300,8 @@ getFavs(){
             <Route exact path="/court" component={Court} />
             <Route exact path="/materials" component={Materials} />
             <Route exact path="/personnel" component={Personnel} />
-            {this.state.singleLoaded ? ( <Route path="/single" component={Single} /> ) : ( <p>... Loading</p>  )}
             <Route exact path="/userProfile" component={UserProfileComponent} /> 
+            {this.state.singleLoaded ? ( <Route path="/single" component={Single} /> ) : ( <p>... Loading</p>  )}
           </Switch>
         </div>
       </Router>
