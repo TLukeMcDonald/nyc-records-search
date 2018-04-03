@@ -97,6 +97,3 @@ dockerCompose {
 }
 dockerCompose.isRequiredBy(test)
 dockerCompose.isRequiredBy(allTests)
-
-task stage(dependsOn: ['build', 'clean'])
-build.mustRunAfter clean

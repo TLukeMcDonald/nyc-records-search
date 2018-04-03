@@ -100,7 +100,7 @@ getFavs(){
     let axiosConfig = { headers: { "Content-Type": "application/json" } };
     //console.log("save id " + id + ", title is " + title );
     try {
-      const newFavResponse = await axios.post(process.env.REACT_APP_HOST+`/favs`, newFav, axiosConfig)
+       await axios.post(process.env.REACT_APP_HOST+`/favs`, newFav, axiosConfig)
     }
     catch(error){
       console.log('Error saving favorite ' + newFav.userFav)
