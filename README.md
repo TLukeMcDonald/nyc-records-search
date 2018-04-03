@@ -13,7 +13,7 @@
       - SpringBoot
       - Docker 
 
-## My Projects
+## My Project
 This application is designed to be an avenue for the city to publish public records and also has the ability to save results after a user signs up. The app includes but is not limited to: public hearings and meetings, public auctions and sales, solicitations and awards and official rules proposed and adopted by city agencies. 
 
 ## Your process/approach.
