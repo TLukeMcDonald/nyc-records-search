@@ -13,6 +13,8 @@
       - SpringBoot
       - Docker 
 
+## My Projects
+This application is designed to be an avenue for the city to publish public records and also has the ability to save results after a user signs up. The app includes but is not limited to: public hearings and meetings, public auctions and sales, solicitations and awards and official rules proposed and adopted by city agencies. 
 
 ## Your process/approach.
   - Completed Testing with stock format of Users-API
@@ -23,6 +25,9 @@
   - 'NPM i'
   - 'npm start' for frontend
   - 'Docker-Compose up' for backend 
+
+## Running Tests
+  - '.gradlew test' from command line 
 
 ## Unsolved problems.
  - Feature testing in Selenium
