@@ -24,8 +24,9 @@ class UserProfile extends Component {
           ) : (<p>... Loading</p>) }
         
         <Link to="/">Home</Link>
+
+        
       </div>;
   }
 }
-
 export default UserProfile;
