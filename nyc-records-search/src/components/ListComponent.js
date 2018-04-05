@@ -6,8 +6,6 @@ import "react-table/react-table.css";
 //import checkboxHOC from "react-table/lib/hoc/selectTable";
 
 
-
-
 class ListComponent extends Component {
   constructor(props) {
     super(props);
@@ -17,44 +15,37 @@ class ListComponent extends Component {
       recordLoaded: false,
       selection: [],
       selectAll: false,
-      columns:[
-        {
-          Header: "Short Title",
-          accessor: "short_title",
-          minWidth: 200
-        },
-        { Header: "From", accessor: "agency_name" },
-        { Header: "Section Name", accessor: "section_name" },
-        { Header: "Type", accessor: "type_of_notice_description" },
-        { Header: "Start Date", accessor: "start_date", maxWidth: 120 },
-        { Header: "Request Id", accessor: "request_id" }
-      ],
+      
     };
     //this.renderEditable = this.renderEditable.bind(this);
   }
 
-  getApiInfo2() {
+  getList() {
     console.log({ "before API2": this.state });
+    console.log({"API Filters":this.props.filters})
     axios
       .get("https://data.cityofnewyork.us/resource/buex-bi6w.json", {
         params: {
-          $limit: 1000,
+          $limit: 5000,
           $$app_token: "GyKJwKngaf2zjKKrmrz8egnG9",
+          $Select: "section_name,request_id,start_date,agency_name,type_of_notice_description,short_title",
+          $Order: "start_date desc",
           section_name: this.props.filters.section_name,
+          agency_name: this.props.filters.agency_name,
+          $q: this.props.filters.q,
           request_id: this.props.filters.request_id,
           start_date: this.props.filters.start_date,
           end_date: this.props.filters.end_date,
-          agency_name: this.props.filters.agency_name,
-          type_of_notice_description: this.props.filters
-            .type_of_notice_description,
-          category_description: this.props.filters.category_description,
-          short_title: this.props.filters.short_title,
-          selection_method_description: this.props.filters
-            .selection_method_description,
-          spectial_case_reason_description: this.props.filters
-            .spectial_case_reason_description,
-          pin: this.props.filters.pin,
-          due_date: this.props.filters.due_date
+          // type_of_notice_description: this.props.filters
+          //   .type_of_notice_description,
+          // category_description: this.props.filters.category_description,
+          // short_title: this.props.filters.short_title,
+          // selection_method_description: this.props.filters
+          //   .selection_method_description,
+          // spectial_case_reason_description: this.props.filters
+          //   .spectial_case_reason_description,
+          // pin: this.props.filters.pin,
+          // due_date: this.props.filters.due_date
         }
       })
       .then(response => {
@@ -66,7 +57,7 @@ class ListComponent extends Component {
 
 
   componentDidMount() {
-    this.getApiInfo2();
+    this.getList();
   }
 
 
@@ -75,9 +66,16 @@ class ListComponent extends Component {
    // const CheckboxTable = checkboxHOC(ReactTable);
     const data = this.state.recordInfo;
     const { toggleSelection, toggleAll, isSelected } = this;
-    const {  columns, selectAll } = this.state;
+    const { selectAll } = this.state;
     const checkboxProps = { selectAll, isSelected, toggleSelection, toggleAll, selectType: "checkbox" };
-
+    const columns = [
+        { Header: "Short Title", accessor: "short_title", minWidth: 200 },
+        { Header: "From", accessor: "agency_name" },
+        { Header: "Type", accessor: "type_of_notice_description" },
+        { Header: "Start Date", accessor: "start_date", maxWidth: 120 },
+        { Header: "Request Id", accessor: "request_id" },
+        { Header: "Section Name", accessor: "section_name" }
+      ];
 
 
   return <div>
