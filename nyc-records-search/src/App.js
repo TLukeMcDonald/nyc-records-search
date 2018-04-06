@@ -80,57 +80,82 @@ class App extends Component {
       });
   }
 
-
-
-
   //adds filters from search screen
-  addFilters = (method, event, data) => {
-    event.preventDefault();
-    let selected = [];
-    console.log(data.length)
-    // data.map( d=> {
-      if (data.public === true) selected.push('(section_name="Public Hearings and Meetings")');
-      if (data.procurement === true) selected = selected + 'or(section_name="Procurement")';
-      if (data.award=== true) selected.push('section_name="Contract Award Hearings"');
-      if (data.rules === true) selected.push('section_name="Agency Rules"');
-      if (data.property === true) selected.push('section_name="Property Disposition"');
-      if (data.court === true) selected.push('section_name="Court Notices"');
-      if (data.materials === true) selected.push('section_name="Special Materials"');
-      if (data.personnel === true) selected.push('section_name="Changes in Personnel"');
-    //return 'e'})
-    console.log(selected)
-    if (data.keyword !==null ) this.setState({$q:data.keyword })
-    console.log(data.keyword)
-    debugger;
+  addFilters = (event, data) => {
+    this.clearFilters();
+     event.preventDefault();
+    let selected;
+    console.log(data.length);
+    //debugger;
+    if (data.public === true) {
+      selected = '(section_name="Public Hearings and Meetings")';
+    }
+
+    if (data.procurement === true) {
+      selected == null
+        ? (selected = '(section_name="Procurement")')
+        : (selected = selected + 'or(section_name="Procurement")');
+    }
+
+    if (data.award === true) {
+      selected == null
+        ? (selected = '(section_name="Contract Award Hearings")')
+        : (selected = selected + 'or(section_name="Contract Award Hearings")');
+    }
+
+    if (data.rules === true) {
+      selected == null
+        ? (selected = '(section_name="Agency Rules")')
+        : (selected = selected + 'or(section_name="Agency Rules")');
+    }
+
+    if (data.property === true) {
+      selected == null
+        ? (selected = '(section_name="Property Disposition")')
+        : (selected = selected + 'or(section_name="Property Disposition")');
+    }
+
+    if (data.court === true) {
+      selected == null
+        ? (selected = '(section_name="Court Notices")')
+        : (selected = selected + 'or(section_name="Court Notices")');
+    }
+
+    if (data.materials === true) {
+      selected == null
+        ? (selected = '(section_name="Special Materials")')
+        : (selected = selected + 'or(section_name="Special Materials")');
+    }
+
+    if (data.personnel === true) {
+      selected == null
+        ? (selected = '(section_name="Changes in Personnel")')
+        : (selected = selected + 'or(section_name="Changes in Personnel")');
+    }
+
+    console.log(selected);
+    if (data.keyword !== null) this.setState({ $q: data.keyword });
+    console.log(data.keyword);
     console.log({ "filter saved": { data } });
 
- axios
-   .get("https://data.cityofnewyork.us/resource/buex-bi6w.json", {
-     params: {
-       $limit: 5,
-       $$app_token: "GyKJwKngaf2zjKKrmrz8egnG9",
-       $Where: selected
-     }
-   })
-   .then(response => {
-     console.log({"log":response.data  });
-     //  console.log({ resp: response.data });
-     //  console.log({ "after getSingle": this.state });
-   });
+    axios
+      .get("https://data.cityofnewyork.us/resource/buex-bi6w.json", {
+        params: {
+          $limit: 5000,
+          $$app_token: "GyKJwKngaf2zjKKrmrz8egnG9",
+          $Where: selected,
+          $q: data.keyword
+        }
+      })
+      .then(response => {
+        console.log({ log: response.data });
+        //  console.log({ resp: response.data });
+        console.log({ "after with Filters": this.state });
+      });
 
     //https://data.cityofnewyork.us/resource/buex-bi6w.json?$select=request_id,agency_name,section_name,start_date&$Where=(section_name=%22Public%20Hearings%20and%20Meetings%22)or(section_name=%20%22Contract%20Award%20Hearings%22)&$limit=10&$order=start_date%20desc
-  //  SELECT section_name, request_id, start_date, agency_name, type_of_notice_description, short_title  WHERE  (section_name="Public Hearings and Meetings") or (section_name="Contract Award Hearings")
-  
+    //  SELECT section_name, request_id, start_date, agency_name, type_of_notice_description, short_title  WHERE  (section_name="Public Hearings and Meetings") or (section_name="Contract Award Hearings")
   };
-
- 
-
-
-
-
-
-
-
 
   // clear filters
   clearFilters = () => {

@@ -37,7 +37,7 @@ class Search extends Component {
     console.log({ "Search props": this.props });
     console.log({"Search state": this.state})
     return (
-      <form className="jumbotron" onSubmit={change => this.props.addFilters("put", change, this.state)}>
+      <form className="jumbotron" onSubmit={change => this.props.addFilters( change, this.state)}>
         <div className="row">
           <div className=" col-auto">
             <label>
