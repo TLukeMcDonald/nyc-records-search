@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { Redirect } from "react-router";
 
 import UserProfile from './components/UserProfile'
 import List from './components/ListComponent'
@@ -151,8 +152,10 @@ class App extends Component {
         console.log({ log: response.data });
         //  console.log({ resp: response.data });
         console.log({ "after with Filters": this.state });
-      });
-
+      })
+      {/*//debugger
+      //this.history.push("/Single");
+      //<Redirect to={"/searchList"} />*/}
     //https://data.cityofnewyork.us/resource/buex-bi6w.json?$select=request_id,agency_name,section_name,start_date&$Where=(section_name=%22Public%20Hearings%20and%20Meetings%22)or(section_name=%20%22Contract%20Award%20Hearings%22)&$limit=10&$order=start_date%20desc
     //  SELECT section_name, request_id, start_date, agency_name, type_of_notice_description, short_title  WHERE  (section_name="Public Hearings and Meetings") or (section_name="Contract Award Hearings")
   };
@@ -367,6 +370,17 @@ class App extends Component {
       />
     );
 
+    //     const SearchList = () => (
+    //   <List
+    //     filters={this.state}
+    //     data-key={"temp"}
+    //     getSingleInfo={this.getSingleInfo}
+    //     saveId={this.saveId}
+    //     record={this.state.records}
+    //     {...this.props}
+    //   />
+    // );
+
     return (
       <Router>
         <div>
@@ -386,6 +400,7 @@ class App extends Component {
             <Route exact path="/personnel" component={Personnel} />
             <Route exact path="/userProfile" component={UserProfileComponent} />
             <Route exact path="/search" component={Search} />
+            {/* <Route exact path="/searchList" component={SearchList} /> */}
             {this.state.singleLoaded ? (
               <Route path="/single" component={Single} />
             ) : (
