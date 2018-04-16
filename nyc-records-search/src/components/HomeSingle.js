@@ -10,7 +10,7 @@ class HomeSingle extends Component {
         return <div className="card bg-info">
             <div className="card-body">
               <Link to={this.props.newPath} onClick={e => this.props.setSection(this.props.section, e)} style={{ textDecoration: "none" }}>
-                <h5 className="card-title text-white">
+                <h5 className="card-title text-warning ">
                   {" "}
                   {this.props.section} <br />
                 </h5>
