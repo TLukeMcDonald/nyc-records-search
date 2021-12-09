@@ -1,15 +1,17 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { Redirect } from "react-router";
 
 import UserProfile from './components/UserProfile'
 import List from './components/ListComponent'
 import SingleComp from './components/SingleComponent'
+import SearchComp from './components/Search';
 import Home from './components/Home'
 import LogIn from './components/LogIn'
 import MyNavbar from './components/Navbar'
 import './App.css';
 import axios from "axios";
-
+import './custom.css'
 
 
 class App extends Component {
@@ -23,58 +25,143 @@ class App extends Component {
       },
       favs: [],
       favsLoaded: false,
+
       section_name: null,
+      agency_name: null,
+      $q: null,
       request_id: null,
       start_date: null,
       end_date: null,
-      agency_name: null,
-      type_of_notice_description: null,
-      category_description: null,
-      short_title: null,
-      selection_method_description: null,
-      spectial_case_reason_description: null,
-      pin: null,
-      due_date: null,
+
       singleInfo: [],
       singleLoaded: false
     };
     this.getSingleInfo = this.getSingleInfo.bind(this);
     this.saveId = this.saveId.bind(this);
     this.getFavs = this.getFavs.bind(this);
+    this.getAgencies = this.getAgencies.bind(this);
   }
 
+  // populates the single page view
   getSingleInfo(id) {
-    console.log({ "Get Single" : this.state });
-
+    // console.log({ "Get Single" : this.state });
     axios
       .get("https://data.cityofnewyork.us/resource/buex-bi6w.json", {
         params: {
-          $limit: 500,
+          $limit: 5,
           $$app_token: "GyKJwKngaf2zjKKrmrz8egnG9",
           request_id: id
         }
       })
       .then(response => {
         this.setState({ singleInfo: response.data, singleLoaded: true });
-        console.log({ resp: response.data });
-        console.log({ "after getSingle": this.state });
+        //  console.log({ resp: response.data });
+        //  console.log({ "after getSingle": this.state });
       });
   }
 
-getFavs(){
-  console.log({"get Favs":this.state.favs});
-  axios
-    .get(process.env.REACT_APP_HOST + "/favs")
-    .then(response => {
+  // populates User Saved notices from DB
+  getFavs() {
+    //console.log({"get Favs":this.state.favs});
+    axios.get(process.env.REACT_APP_HOST + "/favs").then(response => {
       this.setState({ favs: response.data, favsLoaded: true });
-      console.log({ resp: response.data });
-      console.log({ "after getFavs": this.state });
+      // console.log({ resp: response.data });
+      // console.log({ "after getFavs": this.state });
     });
   }
 
+  // get agiencies list for populating the filter in the search section
+  getAgencies() {
+    axios
+      .get(
+        "https://data.cityofnewyork.us/resource/buex-bi6w.json?$select=agency_name&$Group=agency_name"
+      )
+      .then(response => {
+        this.setState({ agencies: response.data });
+      });
+  }
+
+  //adds filters from search screen
+  addFilters = (event, data) => {
+    this.clearFilters();
+     event.preventDefault();
+    let selected;
+    console.log(data.length);
+    //debugger;
+    if (data.public === true) {
+      selected = '(section_name="Public Hearings and Meetings")';
+    }
+
+    if (data.procurement === true) {
+      selected == null
+        ? (selected = '(section_name="Procurement")')
+        : (selected = selected + 'or(section_name="Procurement")');
+    }
+
+    if (data.award === true) {
+      selected == null
+        ? (selected = '(section_name="Contract Award Hearings")')
+        : (selected = selected + 'or(section_name="Contract Award Hearings")');
+    }
+
+    if (data.rules === true) {
+      selected == null
+        ? (selected = '(section_name="Agency Rules")')
+        : (selected = selected + 'or(section_name="Agency Rules")');
+    }
+
+    if (data.property === true) {
+      selected == null
+        ? (selected = '(section_name="Property Disposition")')
+        : (selected = selected + 'or(section_name="Property Disposition")');
+    }
+
+    if (data.court === true) {
+      selected == null
+        ? (selected = '(section_name="Court Notices")')
+        : (selected = selected + 'or(section_name="Court Notices")');
+    }
+
+    if (data.materials === true) {
+      selected == null
+        ? (selected = '(section_name="Special Materials")')
+        : (selected = selected + 'or(section_name="Special Materials")');
+    }
+
+    if (data.personnel === true) {
+      selected == null
+        ? (selected = '(section_name="Changes in Personnel")')
+        : (selected = selected + 'or(section_name="Changes in Personnel")');
+    }
+
+    console.log(selected);
+    if (data.keyword !== null) this.setState({ $q: data.keyword });
+    console.log(data.keyword);
+    console.log({ "filter saved": { data } });
+
+    axios
+      .get("https://data.cityofnewyork.us/resource/buex-bi6w.json", {
+        params: {
+          $limit: 5000,
+          $$app_token: "GyKJwKngaf2zjKKrmrz8egnG9",
+          $Where: selected,
+          $q: data.keyword
+        }
+      })
+      .then(response => {
+        console.log({ log: response.data });
+        //  console.log({ resp: response.data });
+        console.log({ "after with Filters": this.state });
+      })
+      {/*//debugger
+      //this.history.push("/Single");
+      //<Redirect to={"/searchList"} />*/}
+    //https://data.cityofnewyork.us/resource/buex-bi6w.json?$select=request_id,agency_name,section_name,start_date&$Where=(section_name=%22Public%20Hearings%20and%20Meetings%22)or(section_name=%20%22Contract%20Award%20Hearings%22)&$limit=10&$order=start_date%20desc
+    //  SELECT section_name, request_id, start_date, agency_name, type_of_notice_description, short_title  WHERE  (section_name="Public Hearings and Meetings") or (section_name="Contract Award Hearings")
+  };
 
   // clear filters
-  setFiltersNull = () => {
+  clearFilters = () => {
     console.log("clear filters");
     this.setState({
       section_name: null,
@@ -82,50 +169,44 @@ getFavs(){
       start_date: null,
       end_date: null,
       agency_name: null,
-      type_of_notice_description: null,
-      category_description: null,
-      short_title: null,
-      selection_method_description: null,
-      spectial_case_reason_description: null,
-      pin: null,
-      due_date: null
-    })
+      $q: null
+    });
   };
 
-
   //save id and title to database
-  saveId = async (newFav) => {
-   // debugger
-    console.log(newFav)
+  saveId = async newFav => {
+    // debugger
+    console.log(newFav);
     let axiosConfig = { headers: { "Content-Type": "application/json" } };
     //console.log("save id " + id + ", title is " + title );
     try {
-       await axios.post(process.env.REACT_APP_HOST+`/favs`, newFav, axiosConfig)
+      await axios.post(
+        process.env.REACT_APP_HOST + `/favs`,
+        newFav,
+        axiosConfig
+      );
+    } catch (error) {
+      console.log("Error saving favorite " + newFav.userFav);
+      console.log(error);
+      console.log(error.response.data);
+      console.log(error.request);
     }
-    catch(error){
-      console.log('Error saving favorite ' + newFav.userFav)
-      console.log(error)
-      console.log(error.response.data)
-      console.log(error.request)
-    }
-  }
-
+  };
 
   // delete favorite article from list
   deleteFav = async (id, index) => {
     try {
-      await axios.delete(process.env.REACT_APP_HOST + `/favs/${id}`)
+      await axios.delete(process.env.REACT_APP_HOST + `/favs/${id}`);
 
       // const updatedFavList = [...this.state.favs]
       // updatedFavList.splice(index, 1)
       // this.setState({favs: updatedFavList})
-     await    this.getFavs();
-    } catch(error) {
-            console.log(`Error deleting Favorite with ID of ${id}`);
-            console.log(error)
-        }
-  }
-
+      await this.getFavs();
+    } catch (error) {
+      console.log(`Error deleting Favorite with ID of ${id}`);
+      console.log(error);
+    }
+  };
 
   //set section name filter .. not working till after api call for some reason
   setFilterSection = myValue => {
@@ -149,19 +230,12 @@ getFavs(){
     this.setState({ currentUser: newUser });
   };
 
-  // handleChange(change) {
-  //   const name = change.target.name;
-  //   const value = change.target.value;
-  //   this.setState({
-  //     [name]: value,
-  //   });
-  // }
-
   componentDidMount() {
-    // this.setFiltersNull()
+    // this.clearFilters()
     //this.setFilterSection("Agency Rules");
     this.getSingleInfo(20141120107);
     this.getFavs();
+    this.getAgencies();
   }
 
   render() {
@@ -283,11 +357,35 @@ getFavs(){
       />
     );
 
+    const Search = () => (
+      <SearchComp
+        filters={this.state}
+        data-key={"temp"}
+        agencies={this.state.agencies}
+        record={this.state.singleInfo}
+        saveId={this.saveId}
+        addFilters={this.addFilters}
+        back={this.state.section_name}
+        {...this.props}
+      />
+    );
+
+    //     const SearchList = () => (
+    //   <List
+    //     filters={this.state}
+    //     data-key={"temp"}
+    //     getSingleInfo={this.getSingleInfo}
+    //     saveId={this.saveId}
+    //     record={this.state.records}
+    //     {...this.props}
+    //   />
+    // );
+
     return (
       <Router>
         <div>
           <div>
-            <MyNavbar setSection={this.setFilterSection}  />
+            <MyNavbar setSection={this.setFilterSection} />
           </div>
           <Switch>
             <Route exact path="/" component={HomeComponent} />
@@ -300,8 +398,14 @@ getFavs(){
             <Route exact path="/court" component={Court} />
             <Route exact path="/materials" component={Materials} />
             <Route exact path="/personnel" component={Personnel} />
-            <Route exact path="/userProfile" component={UserProfileComponent} /> 
-            {this.state.singleLoaded ? ( <Route path="/single" component={Single} /> ) : ( <p>... Loading</p>  )}
+            <Route exact path="/userProfile" component={UserProfileComponent} />
+            <Route exact path="/search" component={Search} />
+            {/* <Route exact path="/searchList" component={SearchList} /> */}
+            {this.state.singleLoaded ? (
+              <Route path="/single" component={Single} />
+            ) : (
+              <p>... Loading</p>
+            )}
           </Switch>
         </div>
       </Router>

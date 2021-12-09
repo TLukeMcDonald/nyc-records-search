@@ -21,11 +21,12 @@ class UserProfile extends Component {
                 </p>
               </div>;
         })
-          ) : (<p>... Loading</p>) }
+          ) : (<p>... Loading or the AWS backend might be turned off to save money :)</p>) }
         
         <Link to="/">Home</Link>
+
+        
       </div>;
   }
 }
-
 export default UserProfile;

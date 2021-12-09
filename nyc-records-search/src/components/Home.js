@@ -8,11 +8,17 @@ class Home extends Component {
   render() {
     console.log(this.props)
     return <div>
-        <div className="jumbotron ">
+        <div className="jumbotron pt-xl-5 pt-l-5 pt-md-4 pt-sm-3">
           <div className="container-fluid">
-            <h1 className="display-4">NYC: The City Record Online</h1>
+            <h1 className="display-4 font-weight-bold">
+              NYC: The City Record Online
+            </h1>
             <p className="lead">
-              The City Record Online (CROL) is now a fully searchable database of notices published in the City Record newspaper which includes but is not limited to: public hearings and meetings, public auctions and sales, solicitations and awards and official rules proposed and adopted by city agencies. 
+              The City Record Online (CROL) is now a fully searchable
+              database of notices published in the City Record newspaper
+              which includes but is not limited to: public hearings and
+              meetings, public auctions and sales, solicitations and awards
+              and official rules proposed and adopted by city agencies.
             </p>
             <div className="row">
               <HomeSingle section="Public Hearings and Meetings" setSection={this.props.setSection} newPath="/public" text="Includes Notices of Public Hearings and Meetings open to the Public." />
